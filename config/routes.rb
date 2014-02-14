@@ -1,4 +1,6 @@
 BaobatNew::Application.routes.draw do
+  resources :projects
+
   get 'pages/home'
 
   root 'pages#home'
