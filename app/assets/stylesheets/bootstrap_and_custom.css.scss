@@ -2,7 +2,13 @@
 $brand-primary: #00baff;
 $brand-success: #fe8f32;
 $font-family-sans-serif: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$navbar-height: 85px;
 
 
 
 @import "bootstrap";
+
+.navbar-brand img {
+	width: 170px;
+	margin-top: -25px;
+}

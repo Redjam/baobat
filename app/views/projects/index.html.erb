@@ -1,7 +1,14 @@
 <div class="page-header">
 	<h1>Liste des projets <span class="label label-default pull-right"><%= @projects.count %></span></h1>
 </div>
-<%= link_to 'Nouveau projet', new_project_path, class: "btn btn-primary" %>
+
+<div class="container">
+	<%= link_to new_project_path, class: "btn btn-success" do %>
+		<span class="glyphicon glyphicon-plus"></span> Ajouter un projet
+	<% end %>
+</div>
+
+<br>
 
 <% @projects.each do |project| %>
 	<div>
@@ -14,7 +21,10 @@
 		    	<p><%= project.description %></p>
 		    	<hr>
 			    <span class="projects-admin">
-			      <%= link_to edit_project_path(project) do %>
+			    	<%= link_to project do %>
+			      	<span class="glyphicon glyphicon-list-alt"></span> Status
+			      <% end %>
+			      | <%= link_to edit_project_path(project) do %>
 			      	<span class="glyphicon glyphicon-edit"></span> Éditer
 			      <% end %>
 			      | <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' } do %>
