@@ -1,8 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,500,200);
 $brand-primary: #00baff;
-$brand-success: #fe8f32;
+$brand-success: #f39c12;
 $font-family-sans-serif: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $navbar-height: 85px;
+$navbar-border-radius: 0;
+/*$jumbotron-bg: #f39c12;*/
 
 
 
@@ -11,4 +13,25 @@ $navbar-height: 85px;
 .navbar-brand img {
 	width: 170px;
 	margin-top: -25px;
+}
+
+.navbar .nav li {
+	font-size: 15px;
+} 
+
+#home_page {
+	margin-top: -20px;
+}
+
+.item img {
+	height: 400px;
+}
+
+#home_page .jumbotron {
+	background: image-url('home_page_header_bg.jpg');
+	background-repeat: repeat-x;
+}
+
+#home_page .jumbotron {
+	color: #ecf0f1;
 }
