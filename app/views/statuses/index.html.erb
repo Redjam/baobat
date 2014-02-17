@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Projet : <%= @project.title %></h1>
+  <h1>Projet : <%= @project.title %> <span class="label label-default pull-right"><%= @project.statuses.count %></span></h1>
 </div>
 
 <div>
@@ -8,7 +8,7 @@
 
 <br>
 
-<% @project.statuses.each do |status| %>
+<% @project.statuses.order('created_at DESC').each do |status| %>
   <div class="status">
     <strong><%= status.project_id %></strong>
     <p><%= status.content %></p>
