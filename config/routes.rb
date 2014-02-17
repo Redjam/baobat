@@ -1,5 +1,8 @@
 BaobatNew::Application.routes.draw do
-  resources :projects
+  
+  resources :projects do 
+    resources :statuses
+  end
 
   get 'pages/home'
 
