@@ -21,8 +21,8 @@
 		    	<p><%= project.description %></p>
 		    	<hr>
 			    <span class="projects-admin">
-			    	<%= link_to project do %>
-			      	<span class="glyphicon glyphicon-list-alt"></span> Status
+			    	<%= link_to project_statuses_path(project) do %>
+			      	<span class="glyphicon glyphicon-list-alt"></span> Statuts
 			      <% end %>
 			      | <%= link_to edit_project_path(project) do %>
 			      	<span class="glyphicon glyphicon-edit"></span> Éditer

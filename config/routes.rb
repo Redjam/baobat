@@ -4,10 +4,8 @@ BaobatNew::Application.routes.draw do
     resources :statuses
   end
 
-  get 'pages/home'
-
   root 'pages#home'
-
+  get 'pages/home'
   get 'pages/who_we_are'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

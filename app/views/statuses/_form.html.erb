@@ -1,9 +1,9 @@
-<%= simple_form_for(@status) do |f| %>
+<%= simple_form_for [@project, @status] do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :content %>
     <%= f.input :project_id %>
+    <%= f.input :content %>
   </div>
 
   <div class="form-actions">
