@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 3.1.1.0'
 gem 'simple_form', '~> 3.0'
 gem 'paperclip', '~> 4.1'
 gem 'jquery-turbolinks', '~> 2.0.2'
+gem 'devise', '~> 3.2.3'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
