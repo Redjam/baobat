@@ -9,10 +9,12 @@
 <body>
 
 	<%= render '/layouts/header' %>
+	<div class="container">
+		<%= render '/layouts/flash_messages' %>
+	</div>
 	<%= render '/pages/home_page_header' if @enable_home_page_header %>
 
 	<div class="container">
-		<%= render '/layouts/flash_messages' %>
 		<%= yield %>
 	</div>
 

@@ -20,15 +20,35 @@
         <li><a href="#">Références</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Email">
-            <input type="text" class="form-control" placeholder="Mot de passe">
-          </div>
-          <button type="submit" class="btn btn-primary">S'identifier</button>
-        </form>
-      </ul>
+        <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Mon compte', edit_user_registration_path %></li>
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <span class="btn btn-danger"><span class="glyphicon glyphicon-off"></span> Déconnexion</span>
+                <% end %>
+              </div>
+            </form> 
+          </ul>
+        <% else %>
+          <ul class="nav navbar-nav navbar-nav">
+            <li><%= link_to 'Inscription', new_user_registration_path %></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <%= form_for(:user, :url => session_path(:user), :html => { class: 'navbar-form navbar-left' }) do |f| %>
+                <div class="form-group">
+                  <%= f.email_field :email, :autofocus => true, :placeholder =>'Email', class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.password_field :password, :placeholder => 'Mot de passe', class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.submit "Connexion", class: "btn btn-primary" %>
+                </div>
+              <% end %>
+          </ul>
+        <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
