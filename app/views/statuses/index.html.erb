@@ -9,10 +9,15 @@
 <br>
 
 <% @project.statuses.order('created_at DESC').each do |status| %>
-  <div class="status">
-    <strong><%= status.project_id %></strong>
-    <p><%= image_tag status.image.url(:medium), class: 'thumbnail' if status.image? %></p>
-    <p><%= status.content %></p>
+  <div class="status media">
+    <a class="pull-left" href="">
+      <%= image_tag status.image.url(:thumb), class: 'thumbnail' if status.image? %>
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading"><%= status.project_id %></h4>
+      <p><%= status.content %></p>
+    </div>
+    
     <div class="meta">
       <%= link_to 'Publié il y a ' + time_ago_in_words(status.created_at), project_status_path(status) %>
       <span class="admin">
