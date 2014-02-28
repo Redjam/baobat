@@ -2,11 +2,13 @@
 	<h1>Liste des projets <span class="label label-default pull-right"><%= @projects.count %></span></h1>
 </div>
 
+<% if current_user.role?('admin') %>
 <div class="container">
 	<%= link_to new_project_path, class: "btn btn-success" do %>
 		<span class="glyphicon glyphicon-plus"></span> Ajouter un projet
 	<% end %>
 </div>
+<% end %>
 
 <br>
 

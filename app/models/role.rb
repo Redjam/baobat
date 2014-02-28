@@ -1,4 +1,4 @@
-class role < ActiveRecord::Base
+class Role < ActiveRecord::Base
 	has_many :assignments
-	has_many :roles, through: :assignments
+	has_many :users, through: :assignments
 end
