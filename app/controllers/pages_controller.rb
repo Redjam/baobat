@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def who_we_are
+  def about_us
   end
 
 private
