@@ -49,5 +49,19 @@ $navbar-border-radius: 0;
 }
 
 .badge {
-	background-color: #f39c12;
+	background-color: #00baff;
 }
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .page-header {
+ 	margin-top: 20px;
+ }
+
+ .dropdown-header {
+ 	font-weight: 500;
+ }

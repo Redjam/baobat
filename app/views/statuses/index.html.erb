@@ -4,7 +4,9 @@
 
 <% if current_user.role?('admin') %>
   <div>
-    <%= link_to 'Nouveau statut', new_project_status_path, class: 'btn btn-primary' %>
+    <%= link_to new_project_status_path, class: 'btn btn-primary' do %>
+      <span class="glyphicon glyphicon-plus"></span> Ajouter un Statut
+    <% end %>
   </div>
 <% end %>
 
@@ -12,11 +14,9 @@
 
 <% @project.statuses.order('created_at DESC').each do |status| %>
   <div class="status media">
-    <a class="pull-left" href="">
-      <%= image_tag status.image.url(:thumb), class: 'thumbnail' if status.image? %>
-    </a>
+    <%= image_tag status.image.url(:thumb), class: 'thumbnail pull-left' if status.image? %>
     <div class="media-body">
-      <h4 class="media-heading"><%= status.project.title %></h4>
+      <h4 class="media-heading"><%= status.project.client.full_name %></h4>
       <p><%= status.content %></p>
     </div>
     
