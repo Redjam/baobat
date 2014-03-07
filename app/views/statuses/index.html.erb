@@ -1,10 +1,12 @@
 <div class="page-header">
-  <h1>Projet : <%= @project.title %> <span class="label label-default pull-right"><%= @project.statuses.count %></span></h1>
+  <h1>Projet : <%= @project.title %></h1>
 </div>
 
-<div>
-  <%= link_to 'Nouveau statut', new_project_status_path, class: 'btn btn-primary' %>
-</div>
+<% if current_user.role?('admin') %>
+  <div>
+    <%= link_to 'Nouveau statut', new_project_status_path, class: 'btn btn-primary' %>
+  </div>
+<% end %>
 
 <br>
 
@@ -14,16 +16,18 @@
       <%= image_tag status.image.url(:thumb), class: 'thumbnail' if status.image? %>
     </a>
     <div class="media-body">
-      <h4 class="media-heading"><%= status.project_id %></h4>
+      <h4 class="media-heading"><%= status.project.title %></h4>
       <p><%= status.content %></p>
     </div>
     
     <div class="meta">
       <%= link_to 'Publié il y a ' + time_ago_in_words(status.created_at), project_status_path(status) %>
-      <span class="admin">
-        | <%= link_to 'Edit', edit_project_status_path(status) %> |
-        <%= link_to 'Delete', project_status_path(status), method: :delete, data: { confirm: 'Etes vous sûre de vouloir supprimer ce statut'}  %>
-      </span>
+      <% if current_user.role?('admin') %>
+        <span class="admin">
+          | <%= link_to 'Edit', edit_project_status_path(status) %> |
+          <%= link_to 'Delete', project_status_path(status), method: :delete, data: { confirm: 'Etes vous sûre de vouloir supprimer ce statut'}  %>
+        </span>
+      <% end %>
     </div>
   </div>
 <% end %>

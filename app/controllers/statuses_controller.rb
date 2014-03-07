@@ -2,6 +2,7 @@ class StatusesController < ApplicationController
   before_action :set_current_project
   before_action :set_status, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :require_admin_permission, only: [:create, :edit, :update, :destroy, :new]
   
 
   # GET /statuses

@@ -24,7 +24,7 @@
 		    	<p><%= project.description %></p>
 		    	<hr>
 		    	<%= link_to project_statuses_path(project) do %>
-		      	<span class="glyphicon glyphicon-list-alt"></span> Statuts
+		      	<span class="glyphicon glyphicon-list-alt"></span> Statuts <span class="badge"><%= project.statuses.count %></span>
 		      <% end %>
 			    <% if current_user.role?('admin') %> 
 			      <span class="projects-admin">
