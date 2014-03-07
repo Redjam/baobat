@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :assignments
-  has_many :roles, through: :assignments
+  has_many :user_roles
+  has_many :roles, through: :user_roles
 
   after_create :default_role
 

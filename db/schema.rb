@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228090743) do
-
-  create_table "assignments", force: true do |t|
-    t.integer "user_id"
-    t.integer "role_id"
-  end
-
-  add_index "assignments", ["user_id", "role_id"], name: "index_assignments_on_user_id_and_role_id"
+ActiveRecord::Schema.define(version: 20140307071358) do
 
   create_table "projects", force: true do |t|
     t.string   "title"
@@ -43,6 +36,13 @@ ActiveRecord::Schema.define(version: 20140228090743) do
   end
 
   add_index "statuses", ["project_id"], name: "index_statuses_on_project_id"
+
+  create_table "user_roles", force: true do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+  end
+
+  add_index "user_roles", ["user_id", "role_id"], name: "index_user_roles_on_user_id_and_role_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
