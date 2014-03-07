@@ -1,11 +1,16 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :require_admin_permission, only: [:create, :edit, :update, :destroy, :new]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all.order('created_at DESC')
+    if current_user.role_names.include?('admin')
+      @projects = Project.all.order('created_at DESC')
+    else
+      @projects = current_user.projects.order('created_at DESC')
+    end
   end
 
   # GET /projects/1
@@ -26,7 +31,6 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Le projet a été créé avec succès.' }
@@ -70,6 +74,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :description)
+      params.require(:project).permit(:title, :description, :client_id)
     end
 end

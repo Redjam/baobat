@@ -11,4 +11,13 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name]
     devise_parameter_sanitizer.for(:account_update) << [:first_name, :last_name]
   end
+
+  private
+
+  def require_admin_permission
+    unless current_user.role_names.include?('admin')
+      flash[:error] = "Vous n'avez pas les autorisations requises pour cette action."
+      redirect_to projects_path
+    end
+  end
 end

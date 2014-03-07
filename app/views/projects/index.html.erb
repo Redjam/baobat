@@ -18,21 +18,24 @@
 		  <div class="projects panel panel-default">
 		  	<div class="panel-heading">
 		    	<h3 class="panel-title"><%= project.title %></h3>
+		    	<p>Client : <%= project.client.full_name %> </p>
 		    </div>
 		    <div class="panel-body">
 		    	<p><%= project.description %></p>
 		    	<hr>
-			    <span class="projects-admin">
-			    	<%= link_to project_statuses_path(project) do %>
-			      	<span class="glyphicon glyphicon-list-alt"></span> Statuts
-			      <% end %>
-			      | <%= link_to edit_project_path(project) do %>
-			      	<span class="glyphicon glyphicon-edit"></span> Éditer
-			      <% end %>
-			      | <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' } do %>
-			      	<span class="glyphicon glyphicon-trash"></span> Supprimer
-			      <% end %>
-			    </span>
+		    	<%= link_to project_statuses_path(project) do %>
+		      	<span class="glyphicon glyphicon-list-alt"></span> Statuts
+		      <% end %>
+			    <% if current_user.role?('admin') %> 
+			      <span class="projects-admin">
+				      | <%= link_to edit_project_path(project) do %>
+				      	<span class="glyphicon glyphicon-edit"></span> Éditer
+				      <% end %>
+				      | <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' } do %>
+				      	<span class="glyphicon glyphicon-trash"></span> Supprimer
+				      <% end %>
+			    	</span>
+			    <% end %>
 			  </div>
 		  </div>
 		</div>
