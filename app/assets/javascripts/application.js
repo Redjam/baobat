@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery.turbolinks
+//= require fancybox
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks

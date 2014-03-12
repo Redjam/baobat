@@ -14,7 +14,9 @@
 
 <% @project.statuses.order('created_at DESC').each do |status| %>
   <div class="status media">
-    <%= image_tag status.image.url(:thumb), class: 'thumbnail pull-left' if status.image? %>
+    <%= link_to status.image.url(:original), title: "#{@project.title} - Publié il y a #{time_ago_in_words(status.created_at)}", alt: '', id: 'single_1', class: 'pull-left' do %> 
+      <%= image_tag status.image.url(:thumb), class: 'thumbnail' if status.image? %>
+    <% end %>
     <div class="media-body">
       <h4 class="media-heading"><%= status.project.client.full_name %></h4>
       <p><%= status.content %></p>
