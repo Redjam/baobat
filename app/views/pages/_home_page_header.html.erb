@@ -1,43 +1,44 @@
 <div id="home_page">
   <div class="jumbotron">
     <div class="container">
-      <div class="col-md-8">
+      <div class="col-md-7">
         <h1>Vous avez un projet ?</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec.
+          Baobat est une entreprise de <b>construction générale</b>, implantée à Montpellier. Nos compétences pluridisciplinaires et notre méthodologie rigoureuse sont au service de vos idées.
         </p>
         <p>
           <a class="btn btn-primary btn-lg" role="button">Être contacté</a>
           <a class="btn btn-default btn-lg" role="button">Voir nos références</a>
         </p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-md-push-1">
         <div id="home_carousel" class="carousel slide pull-right" data-ride="carousel">
-          <ol class="carousel-indicators">
+          <!--<ol class="carousel-indicators">
             <li data-target="#home_carousel" data-slide-to="0" class="active"></li>
             <li data-target="#home_carousel" data-slide-to="1"></li>
             <li data-target="#home_carousel" data-slide-to="2"></li>
-          </ol>
+            <li data-target="#home_carousel" data-slide-to="3"></li>
+          </ol>-->
           <div class="carousel-inner">
             <div class="item active">
-              <img class="thumbnail" src="http://placehold.it/400x250">
-              <div class="carousel-caption">
-                Caption
-              </div>
+              <%= image_tag "baobat_maison_individuelle.jpg", class: 'thumbnail' %>
             </div>
             <div class="item">
-              <img class="thumbnail" src="http://placehold.it/400x250">
-              <div class="carousel-caption">
-                Caption
-              </div>
+              <%= image_tag "baobat_renovation.jpg", class: 'thumbnail' %>
             </div>
             <div class="item">
-              <img class="thumbnail" src="http://placehold.it/400x250">
-              <div class="carousel-caption">
-                Caption
-              </div>
+              <%= image_tag "baobat_piscine.jpg", class: 'thumbnail' %>
+            </div>
+            <div class="item">
+              <%= image_tag "baobat_construction.jpg", class: 'thumbnail' %>
             </div>
           </div>
+          <a class="left carousel-control" href="#home_carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#home_carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
         </div>
       </div>
     </div>

@@ -2,49 +2,79 @@
 	<h1>Qui sommes-nous ?</h1>
 </div>
 
-<div class="container row">
-	<p class="lead justify">
-		Baobat est une entreprise de construction et de maçonnerie générale implantée à Montpellier. Notre champs d'intervention géographique couvre le département de l'Hérault, en Languedoc-Roussillon.
-	</p>
+<div class="row featurette">
+	<div class="col-md-8">
+		<p class="lead">
+			Baobat est une <span style="font-weight: 400; color: #5bc0de">entreprise de construction et de maçonnerie générale implantée à Montpellier</span>. 
+			<p class="lead">
+			Nous sommes une équipe passionnée et professionnelle à votre écoute. Vos projets sont étudiés minutieusement, quel que soit leur taille ou leur budget. <span style="font-weight: 400; color: #5bc0de">Chaque projet est pour nous une source d’inspiration</span> et c’est grâce à vos projets que nos meilleures idées voient le jour.
+			</p>
+		</p>
+	</div>
+	<div class="col-md-4">
+		<%= image_tag 'baobat_montpellier_construction.jpg', class: "featurette-image img-responsive", width: 'auto', height: '80' %>
+	</div>
 </div>
 
 <hr class="featurette-divider">
 
 <div class="row featurette">
-	<div class="col-md-7">
+	<div class="col-md-12">
 		<h2 class="featurette-heading">
 			Nos Engagements <br />
 			<small><i>Qualité - Coût - Délai</i></small>
 		</h2>
-		<p class="lead justify">
-			Nous avons créé Baobat avec la certitude de pouvoir tenir au moins 3 engagements :
+		<p class="lead">
+			Nous avons créé Baobat avec la certitude de pouvoir tenir au moins trois engagements :
 		</p>
-		<p class="lead justify">
-			Qualité : répondre soigneusement à vos besoins immédiats mais aussi couvrir les besoins futurs identifiables <br />
-			Coût : maîtriser les coûts pour proposer des prix cohérents sans dégrader les conditions de travail, la qualité du livrable et le respect des délais <br />
-			Délais : respecter les délais, c’est également respecter nos clients. Un retard de livraison est souvent à l’origine de surcoûts ultérieurs importants.
-		</p>
-	</div>
-	<div class="col-md-5">
-		<%= image_tag('baobat_montpellier_construction.jpg', class: "featurette-image img-responsive") %>
+		<div class="media col-md-4">
+		  <a class="pull-left" href="#">
+		    <%= image_tag 'baobat_qualite.png', class: 'media-object', width: 'auto', height: '70' %>
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading">Qualité</h4>
+		    <p>Répondre soigneusement à vos besoins immédiats, mais aussi couvrir les besoins futurs identifiables</p>
+		  </div>
+		</div>
+		<div class="media col-md-4">
+		  <a class="pull-left" href="#">
+		  	<%= image_tag 'baobat_cout.png', class: 'media-object', width: 'auto', height: '70' %>
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading">Coût</h4>
+		    <p>Proposer des prix cohérents sans dégrader les conditions de travail, la qualité et le respect des délais.</p>
+		  </div>
+		</div>
+		<div class="media col-md-4">
+		  <a class="pull-left" href="#">
+		    <%= image_tag 'baobat_delais.png', class: 'media-object', width: 'auto', height: '70' %>
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading">Délais</h4>
+		    <p>Respecter les délais, c’est respecter nos clients. Un retard de livraison est souvent à l’origine de désagréments importants.</p>
+		  </div>
+		</div>
 	</div>
 </div>
 
 <hr class="featurette-divider">
 
 <div class="row featurette">
-	<div class="col-md-5">
-		<%= image_tag('baobat_montpellier_construction.jpg', class: "featurette-image img-responsive") %>
+	<div class="col-md-4">
+		<%= image_tag 'baobat_travaux_ressources_humaines.png', class: "featurette-image img-responsive img-rounded", height:'auto', width: '300' %>
 	</div>
-	<div class="col-md-7">
+	<div class="col-md-8">
 		<h2 class="featurette-heading">
 			La Richesse de Baobat <br />
 			<small><i>« Il n'est de richesse que d'Hommes »</i></small>
 		</h2>
-		<p class="lead justify">
-			Nous avons réussi à créer une équipe pluridisciplinaire maitrisant la maçonnerie générale, l'électricité, la plomberie, la peinture, l'isolation, les cloisons et la pose de carrelage. Notre vraie richesse ce sont ces hommes qui bâtissent à la fois vos projets et celui de Baobat.
+		<p class="lead">
+			Notre vraie richesse ce sont les hommes* qui bâtissent à la fois vos projets et celui de Baobat.
 		</p>
-		<p class="lead justify">
+		<p>
+			Nous avons réussi à créer une équipe pluridisciplinaire maitrisant la maçonnerie générale, l'électricité, la plomberie, la peinture, l'isolation, les cloisons et la pose de carrelage.
+		</p>
+		<p>
 			Nous sommes rigoureux et exigeants lors de nos recrutements autant que nous nous engageons auprès de nos salariés. Sécurité, politique de prévention, formation et intéressement constituent une base solide pour des relations durables.
 		</p>
 	</div>
@@ -56,15 +86,15 @@
 	<div class="col-md-7">
 		<h2 class="featurette-heading">
 			L'Équipe Dirigeante <br />
-			<small><i>Qualité - Coût - Délais</i></small>
+			<small><i>Nos meilleures idées viennent de vous</i></small>
 		</h2>
-		<p class="lead justify">
+		<p>
 			L'équipe dirigeante regroupe des profils variés et expérimentés qui ont fait leurs armes dans les plus grandes entreprises de constructions - chez "les nationaux", comme on dit dans notre jargon -.
 		</p>
-		<p class="lead justify">
+		<p>
 			Youssef, directeur financier dans une entreprise de construction et passionné par les métiers du bâtiment, il est devenu maitre de la gestion de chantiers : amélioration des coûts, organisation des travaux, conseils et optimisation de votre enveloppe budgétaire. Dirigeant fondateur de Baobat, Il est le responsable en chef des travaux que nous effectuons.
 		</p>
-		<p class="lead justify">
+		<p>
 			Diplômé d'une grande école de commerce, spécialisé en management de projet, Reda gère l'Espace Client et insuffle une touche de marketing. Le reste du temps, il apporte ses compétences pour la planification et l'organisation des tâches.
 		</p>
 	</div>

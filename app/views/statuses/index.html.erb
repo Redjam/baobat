@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Projet : <%= @project.title %></h1>
+  <h1><%= @project.title %></h1>
 </div>
 
 <% if current_user.role?('admin') %>
@@ -14,11 +14,11 @@
 
 <% @project.statuses.order('created_at DESC').each do |status| %>
   <div class="status media">
-    <%= link_to status.image.url(:original), title: "#{@project.title} - Publié il y a #{time_ago_in_words(status.created_at)}", alt: '', id: 'single_1', class: 'pull-left' do %> 
+    <%= link_to status.image.url(:original), title: "#{@project.title} - Publié il y a #{time_ago_in_words(status.created_at)}", alt: '', id: 'original-fancybox', class: 'pull-left' do %> 
       <%= image_tag status.image.url(:thumb), class: 'thumbnail' if status.image? %>
     <% end %>
     <div class="media-body">
-      <h4 class="media-heading"><%= status.project.client.full_name %></h4>
+      <h4 class="media-heading">Youssef DJAMIL</h4>
       <p><%= status.content %></p>
     </div>
     

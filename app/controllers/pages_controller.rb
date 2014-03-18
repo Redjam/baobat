@@ -7,6 +7,9 @@ class PagesController < ApplicationController
   def about_us
   end
 
+  def references
+  end
+
 private
 
   def enable_home_page_header

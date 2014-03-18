@@ -9,6 +9,7 @@ BaobatNew::Application.routes.draw do
   root 'pages#home'
   get 'pages/home'
   get 'pages/about_us'
+  get 'pages/references'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

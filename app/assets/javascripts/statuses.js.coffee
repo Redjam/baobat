@@ -6,4 +6,4 @@ $ ->
 	$('.status').hover (event) ->
 		$(this).toggleClass("hover")
 
-  $('#single_1').fancybox()
+  $('#original-fancybox').fancybox()

@@ -149,9 +149,9 @@ fr:
     select:
       prompt: "Veuillez sélectionner"
     submit:
-      create: "Créer un(e) %{model}"
-      submit: "Enregistrer ce(tte) %{model}"
-      update: "Modifier ce(tte) %{model}"
+      create: "Créer"
+      submit: "Enregistrer"
+      update: "Modifier"
   number:
     currency:
       format:

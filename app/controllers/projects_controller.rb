@@ -33,7 +33,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Le projet a été créé avec succès.' }
+        format.html { redirect_to projects_path, notice: 'Le projet a été créé avec succès.' }
         format.json { render action: 'show', status: :created, location: @project }
       else
         format.html { render action: 'new' }
@@ -61,7 +61,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url }
+      format.html { redirect_to projects_path, notice: 'Le projet a été supprimé.' }
       format.json { head :no_content }
     end
   end

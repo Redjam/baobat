@@ -2,3 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$brand-primary: #00baff;
+$brand-success: #f39c12;
+$brand-info: #5bc0de;
+$grey-dark: lighten(#000, 20%);
+$grey-light: lighten(#000, 60%);
+
+.references-row h3 {
+  color: $brand-info;
+  font-weight: 500;
+}
+
+.featurette-divider {
+  margin: 40px 0;
+}
+
+.featurette {
+  p {
+    text-align: justify;
+  }
+
+  small {
+    font-weight: 500;
+  }
+}
+
+.featurette-heading {
+  color: $brand-info;
+}
+
+.featurette-image {
+  
+}
