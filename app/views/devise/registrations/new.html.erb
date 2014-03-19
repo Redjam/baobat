@@ -2,17 +2,15 @@
 	<h1>Vous êtes Client de Baobât ? <small>Veuillez vous inscrire pour suivre votre chantier</small></h1>
 </div>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="row">
-  	<div class="col-md-6">
-	  	<p class="lead justify">
-	  		Votre Espace Client permet de suivre l'état d'avancement de vos travaux. Veuillez vous inscrire gratuitement pour suivre vos chantiers à distance, depuis votre ordinateur, tablette ou smartphone.
-	  		<%= image_tag('espace_client.jpg', class: "featurette-image img-responsive") %>
-	  	</p>
-	  </div>
-
+<div class="row">
+ 	<div class="col-md-6">
+  	<p class="lead justify">
+  		Votre Espace Client permet de <span class="accentuation">suivre l'état d'avancement de vos travaux</span>. Veuillez vous inscrire gratuitement pour suivre vos chantiers à distance, depuis votre ordinateur, tablette ou smartphone.
+  		<%= image_tag('espace_client.jpg', class: "featurette-image img-responsive") %>
+  	</p>
+  </div>
+  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
 	  <div class="form-inputs col-md-5 pull-right well">
 	    <%= f.input :first_name, :required => true, label: "Prénom", :autofocus => true %>
 	    <%= f.input :last_name, :required => true, label: "Nom" %>
@@ -21,7 +19,8 @@
 	    <%= f.input :password_confirmation, :required => true, label: "Confirmation du mot de passe" %>
 	    <%= f.button :submit, "Valider mon inscription", class: "pull-right btn-success" %>
 	  </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
+
 
 <!--<%= render "devise/shared/links" %>-->

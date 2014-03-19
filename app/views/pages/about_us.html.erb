@@ -1,11 +1,11 @@
 <div class="page-header">
-	<h1>Qui sommes-nous ?</h1>
+	<h1>Qui sommes-nous ? <small>Mieux nous connaître</small></h1>
 </div>
 
 <div class="row featurette">
 	<div class="col-md-8">
 		<p class="lead">
-			Baobat est une <span style="font-weight: 400; color: #5bc0de">entreprise de construction et de maçonnerie générale implantée à Montpellier</span>. 
+			Baobat est une <span class="accentuation">entreprise de construction et de maçonnerie générale implantée à Montpellier</span>. 
 			<p class="lead">
 			Nous sommes une équipe passionnée et professionnelle à votre écoute. Vos projets sont étudiés minutieusement, quel que soit leur taille ou leur budget. <span style="font-weight: 400; color: #5bc0de">Chaque projet est pour nous une source d’inspiration</span> et c’est grâce à vos projets que nos meilleures idées voient le jour.
 			</p>
@@ -77,28 +77,46 @@
 		<p>
 			Nous sommes rigoureux et exigeants lors de nos recrutements autant que nous nous engageons auprès de nos salariés. Sécurité, politique de prévention, formation et intéressement constituent une base solide pour des relations durables.
 		</p>
+		<small><i>* pour l'instant l'équipe est exclusivement masculine, mais pas pour longtemps ...</i></small>
 	</div>
 </div>
 
 <hr class="featurette-divider">
 
 <div class="row featurette">
-	<div class="col-md-7">
+	<div class="col-md-12">
 		<h2 class="featurette-heading">
 			L'Équipe Dirigeante <br />
 			<small><i>Nos meilleures idées viennent de vous</i></small>
 		</h2>
-		<p>
-			L'équipe dirigeante regroupe des profils variés et expérimentés qui ont fait leurs armes dans les plus grandes entreprises de constructions - chez "les nationaux", comme on dit dans notre jargon -.
+		<p class="lead">
+			Des profils variés et expérimentés.
 		</p>
-		<p>
-			Youssef, directeur financier dans une entreprise de construction et passionné par les métiers du bâtiment, il est devenu maitre de la gestion de chantiers : amélioration des coûts, organisation des travaux, conseils et optimisation de votre enveloppe budgétaire. Dirigeant fondateur de Baobat, Il est le responsable en chef des travaux que nous effectuons.
-		</p>
-		<p>
-			Diplômé d'une grande école de commerce, spécialisé en management de projet, Reda gère l'Espace Client et insuffle une touche de marketing. Le reste du temps, il apporte ses compétences pour la planification et l'organisation des tâches.
-		</p>
+		<div class="media">
+		  <a class="pull-left" href="#">
+		    <%= image_tag 'baobat_equipe_dirigeante.png', class: 'media-object', width: 'auto', height: '70' %>
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading">Youssef</h4>
+		    <p>Directeur financier dans une entreprise de construction et passionné par les métiers du bâtiment, Youssef est devenu maitre de la gestion de chantiers : amélioration des coûts, organisation des travaux, conseils et optimisation de votre enveloppe budgétaire. Dirigeant fondateur de Baobat, Il est le responsable en chef des travaux que nous effectuons.</p>
+		  </div>
+		</div>
+		<blockquote class="blockquote-reverse">
+		  <p><i>Si l'argent n'est pas un problème, ce n'est pas une raison pour faire n'importe quoi.</i></p>
+		</blockquote>
+		<div class="media">
+		  <a class="pull-left" href="#">
+		    <%= image_tag 'baobat_equipe.png', class: 'media-object', width: 'auto', height: '70' %>
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading">Reda</h4>
+		    <p>Diplômé d'une grande école de commerce, spécialisé en management de projet, Reda gère <%= link_to 'L\'Espace Client', new_user_registration_path %> et insuffle une touche de marketing. Le reste du temps, il apporte ses compétences pour la planification et l'organisation des tâches.</p>
+		  </div>
+		</div>
+		<blockquote class="blockquote-reverse">
+		  <p><i>L'espace client n'est pas de la poudre aux yeux, c'est un engagement sur notre promesse de valeur.</i></p>
+		</blockquote>
 	</div>
-	<div class="col-md-5">
-		<%= image_tag('baobat_montpellier_construction.jpg', class: "featurette-image img-responsive") %>
+	<div >
 	</div>
 </div>

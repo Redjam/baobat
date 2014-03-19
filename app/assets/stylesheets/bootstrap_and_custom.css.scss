@@ -7,6 +7,7 @@ $navbar-height: 85px;
 $navbar-border-radius: 0;
 $carousel-control-opacity: 0.3;
 $navbar-default-bg: #fbfcfc;
+$brand-danger: #d9534f;
 // $jumbotron-bg: #f39c12;
 // $body-bg: #ecf0f1;
 
@@ -39,6 +40,10 @@ $navbar-default-bg: #fbfcfc;
 
 .justify {
 	text-align: justify;
+}
+
+.align-right {
+  text-align: right;
 }
 
 .badge {
@@ -76,5 +81,30 @@ $navbar-default-bg: #fbfcfc;
  	background-image: none;
 }
 
+.accentuation {
+  font-weight: 400; 
+  color: #5bc0de;
+}
+
+#footer {
+  background-color: $brand-primary;
+  height: 180px;
+  color: #ffffff;
+
+  .container {
+    padding-top: 20px;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+    #footer {
+        height: auto;
+    }
+}
 
 

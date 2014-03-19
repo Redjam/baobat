@@ -22,15 +22,16 @@ $grey-light: lighten(#000, 60%);
     text-align: justify;
   }
 
-  small {
-    font-weight: 500;
+  blockquote p {
+    text-align: right;
   }
 }
 
 .featurette-heading {
   color: $brand-info;
-}
 
-.featurette-image {
-  
+  small {
+    font-weight: 500;
+    color: $brand-success;
+  }
 }
