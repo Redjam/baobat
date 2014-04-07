@@ -2,10 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.projects p {
-	margin: 4px 0px;
-	text-align: justify;
-	word-wrap:break-word;
+.projects {
+
+  p {
+  	margin: 4px 0px;
+  	text-align: justify;
+  	word-wrap:break-word;
+  }
+
+  .panel-footer {
+    background-color: #ffffff;
+    color: #dddddd;
+  }
+}
+
+.panel-body p {
+  max-length: 20;
 }
 
 .panel-title .label {

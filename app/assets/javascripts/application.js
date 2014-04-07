@@ -18,5 +18,6 @@
 //= require turbolinks
 //= require_tree .
 
-$('.alert').alert()
-$('.alert').alert('close')
+
+$('.alert').alert();
+$('.alert').alert('close');
