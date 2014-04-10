@@ -1,5 +1,7 @@
 BaobatNew::Application.routes.draw do
   
+  get "contact_form/new"
+  get "contact_form/create"
   devise_for :users
   
   resources :projects do 
@@ -11,6 +13,10 @@ BaobatNew::Application.routes.draw do
   get 'pages/about_us'
   get 'pages/references'
   get 'pages/contact'
+
+  match '/contact_forms', to: 'contact_forms#new', via: 'get'
+  resources 'contact_forms', only: [:new, :create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

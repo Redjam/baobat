@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>Discutons <small>Et si nous faisions connaissance ?</small></h1>
+</div>
+<div class="">
+  <h3>Send A message to Us</h3>
+
+  <%= simple_form_for @contact, :html => { :class => 'form' }, defaults: {label: false, input_html: { class: 'input-lg' } }  do |f| %>
+    <div class="col-md-6">
+      <%= f.input :name, required: true, placeholder: 'Nom'  %>
+      <%= f.input :email, required: true, placeholder: 'Email' %>
+      <%= f.input :sujet, required: true, placeholder: 'Sujet' %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :message, as: :text, required: true, placeholder: 'Message', input_html: { style: 'height: 108px'} %>
+      <div class= "hidden">
+        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+      <%= f.button :submit, 'Envoyer', :class=> "btn btn-primary btn-lg btn-block" %>
+    </div>
+  <% end %>
+</div>
