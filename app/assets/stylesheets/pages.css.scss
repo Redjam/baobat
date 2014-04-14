@@ -35,3 +35,11 @@ $grey-light: lighten(#000, 60%);
     color: $grey-light;
   }
 }
+
+.marketing {
+  text-align: center;
+
+  img {
+    height: 150px;
+  }
+}
